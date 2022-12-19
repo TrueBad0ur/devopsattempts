@@ -1,0 +1,4 @@
+gitlab/config
+gitlab/data
+gitlab/gitlab-runner
+gitlab/logs
