@@ -7,6 +7,9 @@ services:
     ports:
       - '3000:3000'
     container_name: frontend
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
   api:
     build: ./api
     restart: always
@@ -15,6 +18,9 @@ services:
     depends_on:
       - mysql
     container_name: backend
+    volumes:
+      - /app/node_modules
+      - ./api:/app
   mysql:
     image: mysql
     restart: always
